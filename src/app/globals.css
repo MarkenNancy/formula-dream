@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+*/
+
+/* .swiper-wrapper {
+  cursor: url("./../../public/images/cursor.png"), pointer !important;
+  cursor: col-resize !important;
+} */
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 0;
+  text-overflow: "";
+  text-align: left;
+  background-color: transparent;
+  background-image: url("/images/select.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: center;
+  background-size: 0.75rem auto;
+  padding-right: 1rem;
+}
+
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+/* .modalOpen , .modalOpen body {
+  height: 100vh !important;
+  overflow: auto;
+}
+.modalOpen body {
+  overflow: hidden !important;
+} */
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.transform-style-3d {
+    transform-style: preserve-3d;
+}
