@@ -96,8 +96,8 @@ const BannerHome: FC<Props> = ({ className, style }) => {
                       <path
                         d="M14.2843 2L21.3725 9.78244M21.3725 9.78244L14.2843 17.5649M21.3725 9.78244H1.81885"
                         stroke="#FF8300"
-                        stroke-width="3"
-                        stroke-linecap="round"
+                        strokeWidth="3"
+                        strokeLinecap="round"
                       />
                     </svg>
                   </div>
@@ -260,28 +260,28 @@ const BannerHome: FC<Props> = ({ className, style }) => {
       {isConfirmOpen && (
         <div className="fixed inset-0 z-[100] backdrop-blur-md bg-black/50 flex items-center justify-center">
           <div className="bg-[#FF7A00]/10 backdrop-blur-sm text-white p-8 rounded-lg w-full lg:mx-96 mx-8 relative border border-orange-400/20">
-            
-           <div className="flex flex-col justify-center items-center">
-             <Image
-              src="/images/home/congratsCar.png"
-              alt="card"
-              width={400}
-              height={380}
-              className=""
-            />
-            <h2 className="relative lg:text-2xl text-lg font-bold text-[#FF5900] uppercase text-center lg:bottom-12 bottom-10">
-              YOU ARE IN
-            </h2>
-            <p className="lg:text-lg text-xs text-white text-center lg:mt-4">
-             Our team will reach out soon to get you on board. Keep an eye on your inbox for the next steps!
-            </p>
-            <button
-              onClick={() => setIsConfirmOpen(false)}
-              className="bg-gradient-to-r from-[#FF5900] to-[#FF8800] px-8 mt-4 py-1 rounded-full uppercase flex items-center justify-center text-md font-semibold text-black"
-            >
-              <h3 className="mx-4">Back to home</h3>
-            </button>
-           </div>
+            <div className="flex flex-col justify-center items-center">
+              <Image
+                src="/images/home/congratsCar.png"
+                alt="card"
+                width={400}
+                height={380}
+                className=""
+              />
+              <h2 className="relative lg:text-2xl text-lg font-bold text-[#FF5900] uppercase text-center lg:bottom-12 bottom-10">
+                YOU ARE IN
+              </h2>
+              <p className="lg:text-lg text-xs text-white text-center lg:mt-4">
+                Our team will reach out soon to get you on board. Keep an eye on
+                your inbox for the next steps!
+              </p>
+              <button
+                onClick={() => setIsConfirmOpen(false)}
+                className="bg-gradient-to-r from-[#FF5900] to-[#FF8800] px-8 mt-4 py-1 rounded-full uppercase flex items-center justify-center text-md font-semibold text-black"
+              >
+                <h3 className="mx-4">Back to home</h3>
+              </button>
+            </div>
           </div>
         </div>
       )}

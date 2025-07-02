@@ -7,9 +7,9 @@ export default async function RootLayout({
 }>) {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main className="flex-1">{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
