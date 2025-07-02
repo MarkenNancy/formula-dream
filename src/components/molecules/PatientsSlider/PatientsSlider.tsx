@@ -5,9 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
 import styled from "styled-components";
-import { Typo, Button, SwiperArrow } from "@/components";
+import { Typo, Button } from "@/components";
 import type { Props as ButonProps } from "@/components/atom/Button/Button";
 import SwiperProgres from "@/components/atom/SwiperProgres/SwiperProgres";
+import SwiperArrow from "@/components/atom/SwiperArrow/SwiperArrow";
 const SwiperContainer = styled(Swiper)``;
 const SwiperSlideContainer = styled(SwiperSlide)`
   // flex-shrink: 1;

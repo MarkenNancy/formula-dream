@@ -1,27 +1,12 @@
-import { Button, GetInTouch, Logos } from "@/components";
-import Container from "@/components/atom/Container/Container";
-// import SolutionsList from "@/components/atom/SolutionsList/SolutionsList";
-import Typo from "@/components/atom/Typo/Typo";
-import BannerHome from "@/components/molecules/BannerHome/BannerHome";
-import ExcitingRole from "@/components/molecules/ExcitingRole/ExcitingRole";
-import PatientsSlider from "@/components/molecules/PatientsSlider/PatientsSlider";
-import ServicesAccordion from "@/components/molecules/ServicesAccordion/ServicesAccordion";
-import ServicesSlider from "@/components/molecules/ServicesSlider/ServicesSlider";
-import StoriesSlider from "@/components/molecules/StoriesSlider/StoriesSlider";
-import { FadeIn, FadeUp } from "@/components/animation";
-// import LogosSlider from "@/components/molecules/LogosSlider/LogosSlider";
-import ThoughtStream from "@/components/organisms/ThoughtStream/ThoughtStream";
-import SolutionsAccordions from "@/components/molecules/SolutionsAccordions/SolutionsAccordions";
 
-// seo
 import { homeSeo } from "@/data/seoData";
 import { Metadata } from "next";
-import Section2 from "@/components/atom/Section2/Section2";
-import PartnerSlider from "@/components/atom/PatnerSlider/PatnerSlider";
-import InfluencerSlider from "@/components/atom/Influencer/Influencer";
-import BenefitSlider from "@/components/atom/Benefits/BenefitSlider";
-import InsideLook from "@/components/atom/InsideLook/InsideLook";
-import FaqsPage from "@/components/atom/FAQ and Mission/Faqs";
+// import Section2 from "@/components/atom/Section2/Section2";
+// import PartnerSlider from "@/components/atom/PatnerSlider/PatnerSlider";
+// import InfluencerSlider from "@/components/atom/Influencer/Influencer";
+// import BenefitSlider from "@/components/atom/Benefits/BenefitSlider";
+// import InsideLook from "@/components/atom/InsideLook/InsideLook";
+// import FaqsPage from "@/components/atom/FAQ and Mission/Faqs";
 import SignupPage from "@/components/atom/SignUpPage/SignupPage";
 export const metadata: Metadata = homeSeo;
 // end seo

@@ -10,11 +10,12 @@ import {
   Pagination,
   EffectFade,
 } from "swiper/modules";
-import { SwiperArrow, Container, Typo, Button } from "@/components";
+import { Container, Typo, Button } from "@/components";
 import styled from "styled-components";
 import Image from "next/image";
 import type { Swiper as SwiperType } from "swiper";
 import { FadeUp } from "@/components/animation";
+import SwiperArrow from "@/components/atom/SwiperArrow/SwiperArrow";
 
 const SwiperContainer = styled(Swiper)`
   .swiper-pagination-bullet {

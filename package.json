@@ -1,5 +1,5 @@
 {
-  "name": "Formula-dream",
+  "name": "formula-dream",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -30,6 +30,7 @@
     "sweetalert2": "^11.21.0",
     "swiper": "^11.2.6",
     "tailwind-merge": "^2.5.5",
+    "web-vitals": "^5.0.3",
     "yarn": "^1.22.22",
     "zod": "^3.24.3"
   },

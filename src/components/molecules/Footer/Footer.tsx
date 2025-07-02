@@ -1,14 +1,5 @@
 import React, { FC } from "react";
-import {
-  Typo,
-  Logo,
-  Container,
-  Button,
-  CustomLink,
-  Address,
-} from "@/components";
-import FollowUs from "@/components/atom/FollowUs/FollowUs";
-import { navLinks, servicesLinks } from "@/data/navData";
+import { Logo, Container } from "@/components";
 import FooterBottom from "./FooterBottom";
 import { twMerge } from "tailwind-merge";
 import { FadeIn, FadeUp } from "@/components/animation";
@@ -19,11 +10,7 @@ export type Props = {
   className?: string;
   style?: React.CSSProperties;
 };
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  weight: ["700"],
-  display: "swap",
-});
+
 const orbitrondesc = Orbitron({
   subsets: ["latin"],
   weight: ["500"],
@@ -51,7 +38,10 @@ const Footer: FC<Props> = ({ className, style }) => {
               <div className="grid">
                 <Link
                   href="/"
-                  className={twMerge(`transition-all duration-500 hidden md:block lg:block xl:block`, className)}
+                  className={twMerge(
+                    `transition-all duration-500 hidden md:block lg:block xl:block`,
+                    className
+                  )}
                   style={style}
                 >
                   <svg
@@ -119,190 +109,53 @@ const Footer: FC<Props> = ({ className, style }) => {
                     />
                   </svg>
                 </Link>
-                {/* <div className="lg:col-span-8 lg:ps-11 lg:pt-10 pt-8">
-                  <Typo
-                    isTitle
-                    weight="bold"
-                    tag="div"
-                    size="sm"
-                    className="opacity-80"
-                  >
-                    <ul className="flex sm:flex-row xl:gap-[1.875rem] gap-5 flex-wrap">
-                      <li>United States</li>
-                      <li>United Kingdom</li>
-                      <li>Singapore</li>
-                      <li>United Arab Emirates</li>
-                      <li>India</li>
-                    </ul>
-                  </Typo>
-                </div> */}
               </div>
-              {/* <div className="grid sm:grid-cols-12 xl:grid-cols-11 lg:mt-8 mt-8 lg:ps-16">
-                <div className="sm:col-span-5 lg:col-span-5 xl:col-span-3 grid"> */}
-              {/* <div className="opacity-80">
-                    <Typo
-                      isTitle
-                      size="sm"
-                      weight="bold"
-                      className="mb-4 opacity-80"
-                    >
-                      Executive HQ
-                    </Typo>
-                    <Typo isTitle weight="light">
-                      Clarient Systems Corporation{" "}
-                      <span className="inline-block">
-                        (A Delaware Corporation)
-                      </span>
-                    </Typo>
-                    <Typo
-                      isTitle
-                      weight="light"
-                      className="mt-3 not-italic"
-                      tag="address"
-                    >
-                      <Address />
-                    </Typo>
-                  </div>
-                  <div className="pt-6">
-                    <Button isRounded typeForm="contact">
-                      Get in touch
-                    </Button>
-                  </div> */}
-              {/* <div className="mt-auto pt-4">
-                    <div className="opacity-80">
-                      <Typo
-                        isTitle
-                        size="sm"
-                        weight="bold"
-                        className="opacity-80 mb-2"
-                      >
-                        Contact
-                      </Typo>
-                    </div>
-                    <Typo isTitle weight="light" size="sm">
-                      <span className="opacity-80">E </span>
-                      <Link
-                        href="mailto:hello@clarient.us"
-                        className="transition-all opacity-80 hover:opacity-100"
-                      >
-                        hello@clarient.us
-                      </Link>
-                    </Typo>
-                    <Typo isTitle weight="light" size="sm">
-                      <span className="opacity-80">P </span>
-                      <Link
-                        className="transition-all underline underline-offset-4 opacity-80 hover:opacity-100"
-                        href="tel:+911724190900"
-                      >
-                        +91 172 4190900
-                      </Link>
-                    </Typo>
-                  </div> */}
             </div>
-            {/* <div className="mt-10 sm:mt-0 sm:ps-4 lg:ps-0 sm:col-span-7 lg:col-span-7 xl:col-span-4 grid grid-cols-2">
-                  <div>
-                    <Typo
-                      isTitle
-                      size="sm"
-                      weight="bold"
-                      className="mb-4 opacity-80"
-                    >
-                      Capabilities
-                    </Typo>
-                    <Typo isTitle weight="light" tag="div" size="sm">
-                      <ul className="space-y-4">
-                        {servicesLinks.map((link, index) => (
-                          <li key={index}>
-                            <CustomLink
-                              href={link.href}
-                              isParent
-                              className="hover:underline underline-offset-8 leading-6"
-                              activeClassName="text-secondary"
-                            >
-                              {link.children}
-                            </CustomLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </Typo>
-                  </div>
-                  <div>
-                    <Typo
-                      isTitle
-                      size="sm"
-                      weight="bold"
-                      className="mb-4 opacity-80"
-                    >
-                      About Us & Resources
-                    </Typo>
-                    <Typo isTitle weight="light" tag="div" size="sm">
-                      <ul className="space-y-4">
-                        {navLinks.map((link, index) => (
-                          <li key={index}>
-                            <CustomLink
-                              className={`hover:underline underline-offset-8 leading-6 ${
-                                link.isHighlight ? "" : ""
-                              }`}
-                              href={link.href}
-                              isParent
-                              activeClassName="text-secondary"
-                            >
-                              {link.children}
-                            </CustomLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </Typo>
-                  </div>
-                </div> */}
-            {/* <div className="mt-10 xl:mt-0 sm:col-span-12 xl:col-span-4">
-                  <div className="flex xl:flex-col sm:flex-row max-sm:flex-col max-xl:justify-between flex-grow h-full">
-                    <div className="">
-                      <FollowUs />
-                    </div>
-                    <div className="flex sm:justify-end justify-start sm:mt-auto mt-8">
-                      <Button
-                        isRounded
-                        size="medium"
-                        variant="outline"
-                        className="px-9"
-                        type="link"
-                        href="https://cerebrent.com"
-                        isExternal
-                      >
-                        cerebrent.com
-              
-                      </Button>
-                    </div>
-                  </div>
-                </div> */}
-            {/* </div>
-            </div> */}
 
             <div className="block md:hidden lg:hidden xl:hidden flex flex-col items-center justify-center pb-12">
-              <Logo/>
-              <div className={`${orbitrondesc.className} uppercase flex flex-row gap-12 py-6 text-white`}>
+              <Logo />
+              <div
+                className={`${orbitrondesc.className} uppercase flex flex-row gap-12 py-6 text-white`}
+              >
                 {/* pages */}
                 <div className="flex flex-col tracking-wide">
                   <h2 className="font-bold">Pages</h2>
-                  <h3 className="opacity-50 italic pt-2 text-sm"><i>Info</i></h3>
-                  <h3 className="opacity-50 italic text-sm"><i>Support</i></h3>
-                  <h3 className="opacity-50 italic text-sm"><i>Partnership</i></h3>
-                  <h3 className="opacity-50 italic text-sm"><i>Contact</i></h3>
+                  <h3 className="opacity-50 italic pt-2 text-sm">
+                    <i>Info</i>
+                  </h3>
+                  <h3 className="opacity-50 italic text-sm">
+                    <i>Support</i>
+                  </h3>
+                  <h3 className="opacity-50 italic text-sm">
+                    <i>Partnership</i>
+                  </h3>
+                  <h3 className="opacity-50 italic text-sm">
+                    <i>Contact</i>
+                  </h3>
                 </div>
                 {/* socials */}
                 <div className="flex flex-col text-right tracking-wide">
                   <h2 className="font-bold">Social</h2>
-                  <h3 className="opacity-50 italic pt-2 text-sm"><i>Instagram</i></h3>
-                  <h3 className="opacity-50 italic text-sm"><i>Youtube</i></h3>
-                  <h3 className="opacity-50 italic text-sm"><i>Twitter</i></h3>
-                  <h3 className="opacity-50 italic text-sm"><i>E-mail</i></h3>
-
+                  <h3 className="opacity-50 italic pt-2 text-sm">
+                    <i>Instagram</i>
+                  </h3>
+                  <h3 className="opacity-50 italic text-sm">
+                    <i>Youtube</i>
+                  </h3>
+                  <h3 className="opacity-50 italic text-sm">
+                    <i>Twitter</i>
+                  </h3>
+                  <h3 className="opacity-50 italic text-sm">
+                    <i>E-mail</i>
+                  </h3>
                 </div>
               </div>
-              <h3 className={`${orbitrondesc.className} text-[10px] text-white items-center pt-4`}>© 2025 Formula Dream. All rights reserved.</h3>
+              <h3
+                className={`${orbitrondesc.className} text-[10px] text-white items-center pt-4`}
+              >
+                © 2025 Formula Dream. All rights reserved.
+              </h3>
             </div>
-
           </FadeUp>
           <div className="hidden md:block lg:block xl:block">
             <FadeIn delay={0.5}>

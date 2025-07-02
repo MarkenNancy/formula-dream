@@ -1,10 +1,11 @@
 "use client";
 import React, { FC, useState } from "react";
-import { Container, Button, ServicesIcons } from "@/components";
+import { Container, Button } from "@/components";
 import SolutionsAccordionItm, {
   Props as SolutionsAccordionItmProps,
 } from "./SolutionsAccordionItm";
 import { twMerge } from "tailwind-merge";
+import ServicesIcons from "@/components/atom/ServicesIcons/ServicesIcons";
 export type Props = {
   className?: string;
   style?: React.CSSProperties;

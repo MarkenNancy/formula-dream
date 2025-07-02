@@ -1,5 +1,4 @@
-import { Typo, Container, CustomLink } from "@/components";
-import { cmsLinks } from "@/data/navData";
+import { Typo, Container } from "@/components";
 import { Orbitron } from "next/font/google";
 import { FC } from "react";
 import { twMerge } from "tailwind-merge";

@@ -7,12 +7,12 @@ import { servicesData } from "@/data/services";
 import {
   Typo,
   Button,
-  ServicesIcons,
-  SwiperArrow,
   Container,
 } from "@/components";
 import styled from "styled-components";
 import LinkList from "@/components/atom/LinkList/LinkList";
+import SwiperArrow from "@/components/atom/SwiperArrow/SwiperArrow";
+import ServicesIcons from "@/components/atom/ServicesIcons/ServicesIcons";
 // import "swiper/css/scrollbar";
 const SwiperContainer = styled(Swiper)`
   align-items: stretch;
