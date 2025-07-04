@@ -1,16 +1,9 @@
 "use client";
-import React, { FC, Suspense, useState, useEffect } from "react";
-import { twMerge } from "tailwind-merge";
-import { Button, Container, Logo, Typo } from "@/components";
-import dynamic from "next/dynamic";
-import { FadeUp, Parallax, ScaleOnHover } from "@/components/animation";
-import Countdown from "@/components/atom/CountDown/Countdown";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import React, { FC, useState, useEffect } from "react";
+// import { useRouter } from "next/navigation";
 import { Orbitron } from "next/font/google";
 import Image from "next/image";
 import TextFadeUp from "@/components/animation/TextFadeUp";
-
 
 export type Props = {
   style?: React.CSSProperties;
@@ -27,12 +20,12 @@ const orbitrondesc = Orbitron({
   display: "swap",
 });
 
-const EarlyAccess: FC<Props> = ({ className, style }) => {
+const EarlyAccess: FC<Props> = ({ }) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [scrollY, setScrollY] = useState(0);
-  const [showForm, setShowForm] = useState(false);
-  const router = useRouter();
+  // const [scrollY, setScrollY] = useState(0);
+  // const [showForm, setShowForm] = useState(false);
+  // const router = useRouter();
   const [showFirstImage, setShowFirstImage] = useState(true);
 
   useEffect(() => {

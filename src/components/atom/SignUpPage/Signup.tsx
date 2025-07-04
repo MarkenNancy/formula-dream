@@ -1,11 +1,5 @@
 "use client";
-import React, { FC, Suspense, useState } from "react";
-import { twMerge } from "tailwind-merge";
-import { Button, Container, Logo, Typo } from "@/components";
-import dynamic from "next/dynamic";
-import { FadeUp, Parallax, ScaleOnHover } from "@/components/animation";
-import Countdown from "@/components/atom/CountDown/Countdown";
-import Link from "next/link";
+import React, { FC} from "react";
 import { Orbitron } from "next/font/google";
 import Image from "next/image";
 
@@ -24,7 +18,7 @@ const orbitrondesc = Orbitron({
   display: "swap",
 });
 
-const Signup: FC<Props> = ({ className, style }) => {
+const Signup: FC<Props> = ({ }) => {
   return (
     <>
       <div className="lg:bg-gradient-to-b lg:from-[#151515] lg:via-[#603114] lg:to-[#FF6F13] bg-[radial-gradient(circle_at_top,_#FF6F13_0%,_#151515_50%,_#0F0F0F_100%)] pt-12 h-screen">

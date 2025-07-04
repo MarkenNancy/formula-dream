@@ -28,7 +28,8 @@ const cards = [
 ];
 
 export default function InsideLook() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
+  const currentIndex = 0;
   const visibleCards = [
     cards[(currentIndex - 1 + cards.length) % cards.length],
     cards[currentIndex],

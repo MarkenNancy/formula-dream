@@ -3,8 +3,9 @@ import React, { FC } from "react";
 import { twMerge } from "tailwind-merge";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { Logos } from "@/components";
+
 import styled from "styled-components";
+import Logos from "@/components/atom/Logos/Logos";
 const SwiperContainer = styled(Swiper)`
   .swiper-wrapper {
     display: flex;

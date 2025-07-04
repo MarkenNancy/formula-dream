@@ -1,9 +1,6 @@
 "use client";
-import Image from "next/image";
 import "swiper/css";
 import { Orbitron } from "next/font/google";
-import { useState } from "react";
-import { motion } from "framer-motion";
 
 const orbitron = Orbitron({
   subsets: ["latin"],

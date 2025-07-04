@@ -1,11 +1,8 @@
 "use client";
 import React, { FC, Suspense, useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { Button, Container, Typo } from "@/components";
-import dynamic from "next/dynamic";
-import { FadeUp, Parallax, ScaleOnHover } from "@/components/animation";
+import { Container } from "@/components";
 import Countdown from "@/components/atom/CountDown/Countdown";
-import Link from "next/link";
 import { Orbitron } from "next/font/google";
 import Image from "next/image";
 
@@ -14,11 +11,6 @@ export type Props = {
   className?: string;
 };
 
-function getRandomInt(min: number, max: number) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 const orbitron = Orbitron({
   subsets: ["latin"],
   weight: ["500"],

@@ -1,8 +1,5 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
 import Image from "next/image";
-import "swiper/css";
 import { Orbitron } from "next/font/google";
 import PartnerSlider2 from "./partnerSlider2";
 
@@ -13,44 +10,6 @@ const partners = [
   { src: "/images/partners/throttletherapy.png", alt: "Throttle Therapy" },
   { src: "/images/partners/Rectangle.png", alt: "World of Racing" },
   { src: "/images/partners/Layer_1.png", alt: "World of Racing" },
-];
-
-const cards = [
-  {
-    title: "CIRCUIT OF THE AMERICAS",
-    subtitle: "F1 Racing Experience",
-    description:
-      "Experience the thrill of Formula 1 racing at America's premier motorsport destination. World-class facilities and unforgettable racing action.",
-    color: "from-orange-600 to-red-600",
-  },
-  {
-    title: "PREMIUM HOSPITALITY",
-    subtitle: "VIP Experience",
-    description:
-      "Exclusive access to premium viewing areas, gourmet dining, and behind-the-scenes experiences that bring you closer to the action.",
-    color: "from-blue-600 to-purple-600",
-  },
-  {
-    title: "STATE-OF-THE-ART FACILITY",
-    subtitle: "World Class Venue",
-    description:
-      "Modern amenities, cutting-edge technology, and innovative design create the perfect environment for motorsport excellence.",
-    color: "from-green-600 to-teal-600",
-  },
-  {
-    title: "RACING CALENDAR",
-    subtitle: "Annual Events",
-    description:
-      "Home to multiple racing series throughout the year, featuring the best drivers and teams from around the world competing at the highest level.",
-    color: "from-purple-600 to-pink-600",
-  },
-  {
-    title: "ENTERTAINMENT HUB",
-    subtitle: "Beyond Racing",
-    description:
-      "Concerts, festivals, and special events make this venue a year-round destination for entertainment and unforgettable experiences.",
-    color: "from-yellow-600 to-orange-600",
-  },
 ];
 
 const orbitron = Orbitron({

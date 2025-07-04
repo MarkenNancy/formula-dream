@@ -1,16 +1,15 @@
 "use client";
-import React, { FC, useState, useEffect } from "react";
-import { twMerge } from "tailwind-merge";
+import React from "react";
 import { Container } from "@/components";
 import Image from "next/image";
 import { Orbitron } from "next/font/google";
 import TextFadeUp from "@/components/animation/TextFadeUp";
 import { FadeUp } from "@/components/animation";
 
-export type Props = {
-  style?: React.CSSProperties;
-  className?: string;
-};
+// export type Props = {
+//   style?: React.CSSProperties;
+//   className?: string;
+// };
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -23,9 +22,9 @@ const orbitrondesc = Orbitron({
   display: "swap",
 });
 
-const WelcomePage: FC<Props> = ({ className, style }) => {
-  const [scrollY, setScrollY] = useState(0);
-  const [showForm, setShowForm] = useState(false);
+const WelcomePage = () => {
+  // const [scrollY, setScrollY] = useState(0);
+  // const [showForm, setShowForm] = useState(false);
 
   // useEffect(() => {
   //   const handleScroll = () => {

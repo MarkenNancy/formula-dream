@@ -3,10 +3,11 @@ import React, { FC } from "react";
 import { twMerge } from "tailwind-merge";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { Typo, SwiperArrow } from "@/components";
+import { Typo } from "@/components";
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
+import SwiperArrow from "@/components/atom/SwiperArrow/SwiperArrow";
 // import "swiper/css/scrollbar";
 const SwiperContainer = styled(Swiper)`
   // .swiper-wrapper {

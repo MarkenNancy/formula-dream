@@ -1,7 +1,8 @@
 // components/Input.tsx
 import React from "react";
-import { ErrorMessage, Label } from "@/components";
 import { twMerge } from "tailwind-merge";
+import Label from "../Label/Label";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   className?: string;
