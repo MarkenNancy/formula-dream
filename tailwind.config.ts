@@ -12,10 +12,8 @@ export default {
       fontSize: {
         root: "clamp(0.95rem, 1.9vmin, 14.25rem)",
       },
-      fontFamily: {
-        title: "Magistral",
-        inter: "Magistral",
-        body: "Magistral",
+       fontFamily: {
+        magistral: ["Magistral", "sans-serif"],
       },
         clipPath: {
       'arc-bottom': 'ellipse(100% 90% at 50% 100%)',

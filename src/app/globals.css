@@ -26,6 +26,7 @@ body {
   cursor: col-resize !important;
 } */
 
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -76,4 +77,25 @@ html.lenis body {
 
 .transform-style-3d {
     transform-style: preserve-3d;
+}
+
+@font-face {
+  font-family: 'Magistral';
+  src: url('/font/magistral/magistral_bold_macroman/mgs75-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Magistral';
+  src: url('/font/magistral/magistral_bolditalic_macroman/mgs76-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Magistral';
+  src: url('/font/magistral/magistral_book_macroman/mgs55-webfont.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
