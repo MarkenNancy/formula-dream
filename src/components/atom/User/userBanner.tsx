@@ -1,23 +1,21 @@
 "use client";
-import React, { FC, Suspense, useState } from "react";
+import React, { FC, useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { Container } from "@/components";
-import Countdown from "@/components/atom/CountDown/Countdown";
-import { Orbitron } from "next/font/google";
 import Image from "next/image";
+import { Orbitron } from "next/font/google";
+import Countdown2 from "../CountDown/Countdown2";
+import Countdown3 from "../CountDown/Countdown3";
 
 export type Props = {
   style?: React.CSSProperties;
   className?: string;
 };
-
 const orbitron = Orbitron({
   subsets: ["latin"],
-  weight: ["500"],
+  weight: ["900"],
   display: "swap",
 });
-
-const BannerHome: FC<Props> = ({ className, style }) => {
+const UserBanner: FC<Props> = ({ className, style }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
 
@@ -33,73 +31,90 @@ const BannerHome: FC<Props> = ({ className, style }) => {
   return (
     <section
       className={twMerge(
-        "text-white pt-20 pb-36 xl:pb-24 lg:pb-36 lg:bg-contain bg-black md:bg-contain bg-cover bg-center bg-no-repeat w-full overflow-hidden bg-[url(/images/home/landing_vdo.gif)] lg:bg-[url(/images/home/landing_vdo.gif)] xl:bg-[url(/images/home/landing_vdo.gif)] md:bg-[url(/images/home/landing_vdo.gif)]",
-        className
+        "text-white lg:bg-gradient-to-b lg:from-black lg:via-black lg:to-[#FF7A00] py-8 lg:py-0 rounded-b-2xl pt-12 lg:pt-0 bg-cover h-screen lg:h-auto bg-no-repeat bg-[url(/images/home/userPhoneG.png)]"
       )}
-      style={{
-        ...style,
-        boxShadow: "0px 4px 4px 0px #FF5900",
-      }}
     >
-      <Suspense fallback={``}></Suspense>
-      <div className="relative z-[2]">
-        <Container>
-          <div className="relative z-10 flex flex-col items-center text-center px-4">
-            <Countdown />
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mt-12 lg:mt-0">
+        {/* Countdown Section */}
+        <div className="flex flex-col items-center lg:items-center lg:ml-20 my-6 lg:my-4">
+          <div className="flex flex-col justify-center items-center block lg:hidden mb-8">
             <h1
-              className={`${orbitron.className}
-              text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-[45px] font-medium
-              leading-tight tracking-wide text-center uppercase text-[#FF5900] lg:mt-6 md:mt-6 mt-20
-              `}
+              className={`${orbitron.className} text-3xl lg:text-5xl font-extrabold uppercase bg-gradient-to-b from-[#FFFFFF] to-[#FF7822] bg-clip-text text-transparent`}
             >
-              BRING LOYAL RACING FANS <br /> CLOSER TO YOUR BRAND
+              <i>WHERE F1 LIVES</i>
             </h1>
-
-            <div className="flex flex-wrap justify-center items-center lg:gap-4 md:gap-3 gap-2 mt-6 font-custom">
-              <p className="text-sm md:text-base lg:text-lg font-medium uppercase text-[#FFD6B0]">
-                BUILD LOYALTY
-              </p>
-              <div className="w-[4px] h-[4px] lg:w-[8px] lg:h-[8px] rounded-full bg-[#FF7B00]"></div>
-              <p className="text-sm md:text-base lg:text-lg font-medium uppercase text-[#FFD6B0]">
-                ACCELERATE GROWTH
-              </p>
-              <div className="w-[4px] h-[4px] lg:w-[8px] lg:h-[8px] rounded-full bg-[#FF7B00]"></div>
-              <p className="text-sm md:text-base lg:text-lg font-medium uppercase text-[#FFD6B0]">
-                SIMPLIFY SUCCESS
-              </p>
-            </div>
-
-            <div className="lg:mt-8 md:mt-8 mt-64 lg:mb-80 bg-gradient-to-r from-[#ff6600] to-[#ff9900] text-black px-6 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition text-sm md:text-base lg:text-lg">
-              <button className="" onClick={toggleModal}>
-                <div className="flex flex-row items-center justify-end">
-                  <h2
-                    className={`${orbitron.className} text-xs md:text-sm text-black uppercase px-3`}
+            <p
+              className={`${orbitron.className} mt-2 text-sm lg:text-lg text-white tracking-wide`}
+            >
+              CONNECT. COMPETE. CELEBRATE
+            </p>
+          </div>
+          <Countdown3 />
+          <div className="text-center lg:text-left mt-6 lg:mt-12">
+            <div className="flex flex-col justify-center items-center">
+              <center>
+                <div className="flex flex-col justify-center items-center hidden lg:block">
+                  <h1
+                    className={`${orbitron.className} text-3xl lg:text-5xl font-extrabold uppercase bg-gradient-to-b from-[#FFFFFF] to-[#FF7822] bg-clip-text text-transparent`}
                   >
-                    Apply for early access
-                  </h2>
-                  <div className="rounded-full px-3 py-1 bg-black text-orange-800">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M14.2843 2L21.3725 9.78244M21.3725 9.78244L14.2843 17.5649M21.3725 9.78244H1.81885"
-                        stroke="#FF8300"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </div>
+                    <i>WHERE F1 LIVES</i>
+                  </h1>
+                  <p
+                    className={`${orbitron.className} mt-2 text-sm lg:text-lg text-white tracking-wide`}
+                  >
+                    CONNECT. COMPETE. CELEBRATE
+                  </p>
                 </div>
-              </button>
+              </center>
+              <div className="relative top-80 mt-4 lg:mt-1 lg:top-4 flex flex-col justify-center items-center bg-black/60 p-6 px-8 rounded-2xl border border-[#FF7822] backdrop-blur lg:bg-transparent lg:p-0 lg:rounded-none lg:border-none lg:backdrop-none">
+                <div className="lg:mt-8 w-fit lg:mt-12 bg-[#FF7822] text-black px-2 py-1 rounded-full font-bold shadow-lg hover:scale-105 transition text-sm md:text-base lg:text-lg">
+                  <button className="" onClick={toggleModal}>
+                    <div className="flex flex-row items-center justify-center lg:justify-start">
+                      <h2
+                        className={`font-semibold text-xl font-bold uppercase px-4`}
+                      >
+                        CLAIM YOUR SPOT
+                      </h2>
+                      <div className="relative z-50 rounded-full px-3 py-1 lg:px-4 lg:py-2 bg-black">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          className=""
+                        >
+                          <path
+                            d="M14.2843 2L21.3725 9.78244M21.3725 9.78244L14.2843 17.5649M21.3725 9.78244H1.81885"
+                            stroke="#FF7822"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <h4 className="lg:mt-4 mt-2 text-xl">
+                  ONLY 1000 SPOTS RESERVED
+                </h4>
+              </div>
             </div>
           </div>
-        </Container>
+        </div>
+
+        {/* Image Section */}
+        <div className="relative -bottom-12 lg:-bottom-10 lg:right-4  hidden lg:block">
+          <Image
+            src="/images/home/userGroup.png"
+            alt="Racers"
+            width={2000}
+            height={400}
+            className="w-[500px] lg:w-[1500px]"
+          />
+        </div>
       </div>
-       {isModalOpen && (
+      {isModalOpen && (
         <div className="fixed inset-0 z-[100] backdrop-blur-md bg-black/50 flex items-center justify-center">
           <div className="bg-[#FF7A00]/10 backdrop-blur-sm text-white p-8 rounded-lg w-auto mx-24 relative border border-orange-400/20">
             <button
@@ -242,10 +257,10 @@ const BannerHome: FC<Props> = ({ className, style }) => {
               </div>
             </div>
             {/* 
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-          
-              
-            </div> */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2">
+                
+                    
+                  </div> */}
           </div>
         </div>
       )}
@@ -271,13 +286,13 @@ const BannerHome: FC<Props> = ({ className, style }) => {
                 YOU ARE IN
               </h2>
               <h2 className="block lg:hidden relative lg:text-2xl text-2xl font-bold text-[#FF5900] uppercase text-center bottom-20">
-                QUALIFYING IN <br/> PROGRESS
+                QUALIFYING IN <br /> PROGRESS
               </h2>
               <p className="lg:text-lg text-xs text-white text-center hidden lg:block">
-                Our team will reach out soon to get you on board. Keep an <br/>eye on
-                your inbox for the next steps!
+                Our team will reach out soon to get you on board. Keep an <br />
+                eye on your inbox for the next steps!
               </p>
-               <p className="lg:text-lg text-[16px] text-white text-center block lg:hidden">
+              <p className="lg:text-lg text-[16px] text-white text-center block lg:hidden">
                 Our team will reach out soon to get you on board. Keep an eye on
                 your inbox for the next steps!
               </p>
@@ -291,9 +306,9 @@ const BannerHome: FC<Props> = ({ className, style }) => {
           </div>
         </div>
       )}
-      <div className="relative lg:-bottom-8 -bottom-20 z-50 items-center flex justify-center">
+      <div className="relative lg:bottom-12 -bottom-80 z-100 items-center flex justify-center">
         <div
-          className="rounded-2xl border border-[#FF7A00] bg-[#FF7A0036] py-4 px-3 cursor-pointer"
+          className="rounded-full bg-white/20 backdrop-blur py-4 px-6 cursor-pointer"
           onClick={() => {
             const target = document.getElementById("target-section");
             if (target) {
@@ -302,8 +317,8 @@ const BannerHome: FC<Props> = ({ className, style }) => {
           }}
         >
           <svg
-            width="21"
-            height="13"
+            width="24"
+            height="16"
             viewBox="0 0 21 13"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -321,4 +336,4 @@ const BannerHome: FC<Props> = ({ className, style }) => {
   );
 };
 
-export default BannerHome;
+export default UserBanner;

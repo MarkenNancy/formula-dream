@@ -9,6 +9,8 @@ import FaqsPage from "@/components/atom/FAQ and Mission/Faqs";
 import SignupPage from "@/components/atom/SignUpPage/SignupPage";
 import BannerHome from "@/components/molecules/BannerHome/BannerHome";
 import { FadeUp } from "@/components/animation";
+import MainWaitlist from "@/components/atom/Waitlist/MainWaitlist";
+import MainUserPage from "@/components/atom/User/MainUserPage";
 export const metadata: Metadata = homeSeo;
 // end seo
 
@@ -16,7 +18,9 @@ const page = () => {
   return (
     <>
       {/* <SignupPage/> */}
-      <BannerHome />
+      {/* <MainWaitlist/> */}
+       <MainUserPage/>
+      {/* <BannerHome />
       <FadeUp as={"section"} className="relative">
         <div className="absolute top-0 left-0 w-full bottom-0 bg-gradient-to-b from-black via-[#FF5E00]/80 to-black mt-10"></div>
 
@@ -25,12 +29,7 @@ const page = () => {
 
       <FadeUp as={"section"} className="relative">
         <div className="relative flex items-center justify-center overflow-hidden">
-          <div
-            className="hidden md:block lg:block xl:block absolute w-[2500px] h-[2500px] rounded-full border border-white opacity-50 -mt-96 mb-48"
-            style={{
-              clipPath: "inset(0 0)",
-            }}
-          ></div>
+         
 
           <div className="w-full">
             <PartnerSlider />
@@ -40,7 +39,7 @@ const page = () => {
             <FaqsPage />
           </div>
         </div>
-      </FadeUp>
+      </FadeUp> */}
     </>
   );
 };

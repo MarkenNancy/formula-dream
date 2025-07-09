@@ -29,6 +29,12 @@ const cards = [
     details:
       "For the first time in racing, influencers can directly monetize their audience by hosting leagues and earning 80% of the profits. This model sparks engagement, builds vibrant communities, and creates lasting value for fans, influencers, and businesses alike.",
   },
+  {
+    id: 5,
+    title: "Empowering Influencers to Drive Growth and Profit",
+    details:
+      "For the first time in racing, influencers can directly monetize their audience by hosting leagues and earning 80% of the profits. This model sparks engagement, builds vibrant communities, and creates lasting value for fans, influencers, and businesses alike.",
+  },
 ];
 
 const orbitron = Orbitron({
@@ -87,19 +93,26 @@ export default function InfluencerSlider() {
         opacity: 1,
       },
       1: {
-        transform: "translateX(20px) translateY(8px) rotateZ(6deg) scale(0.95)",
+        transform:
+          "translateX(20px) translateY(12px) rotateZ(10deg) scale(0.9)",
         zIndex: 30,
         opacity: 0.8,
       },
       2: {
         transform:
-          "translateX(-25px) translateY(15px) rotateZ(-8deg) scale(0.9)",
-        zIndex: 20,
-        opacity: 0.6,
+          "translateX(-20px) translateY(12px) rotateZ(-10deg) scale(0.9)",
+        zIndex: 30,
+        opacity: 0.8,
       },
       3: {
         transform:
-          "translateX(15px) translateY(-5px) rotateZ(12deg) scale(0.85)",
+          "translateX(20px) translateY(20px) rotateZ(-10deg) scale(0.85)",
+        zIndex: 10,
+        opacity: 0.4,
+      },
+      4: {
+        transform:
+          "translateX(-20px) translateY(20px) rotateZ(10deg) scale(0.85)",
         zIndex: 10,
         opacity: 0.4,
       },
@@ -111,165 +124,169 @@ export default function InfluencerSlider() {
   const closePopup = () => setActiveCardId(null);
 
   return (
-    <div className="bg-gradient-to-b from-[#ff6600] to-[#301401] px-6 lg:px-16 xl:px-28 md:px-16 md:py-8 lg:py-8 xl:py-8 py-none">
-      <center>
-        <div className="bg-gradient-to-b from-[#ff6600] to-[#301401] text-center max-w-7xl w-96 h-auto md:w-auto lg:w-auto xl:w-auto rounded-2xl">
-          <h2
-            className={`${orbitron.className} text-lg xl:text-2xl lg:text-2xl md:text-2xl text-white font-bold uppercase py-8 pt-4`}
-          >
-            What Attracts Influencers <br /> and Fans to Formula Dream
-          </h2>
-          <div className="flex flex-row items-center justify-center md:justify-between lg:justify-between xl:justify-between mx-12 relative">
-            {/* Phone 1 */}
-            <Image
-              src="/images/home/phone-left.png"
-              alt=""
-              width={250}
-              height={250}
-              className="hidden md:block lg:block xl:block"
-            />
-            <button
-              onClick={prevSlide}
-              className="md:mr-4 lg:mr-4 xl:mr-4 mr-1 bg-[#ff6600] text-black rounded-full p-2 shadow-md hidden lg:block"
+    <>
+      <div className="bg-gradient-to-b from-[#ff6600] via-[#301401] to-black pt-10 pb-24 text-center px-4 lg:px-16 xl:px-28 md:px-16 md:py-8 lg:py-8 xl:py-8 py-none">
+        <center>
+          <div className="bg-gradient-to-b from-[#ff6600] to-[#301401] p-2 text-center max-w-8xl w-96 pb-8 shadow-md h-auto md:w-auto lg:w-auto xl:w-auto rounded-2xl">
+            <h2
+              className={`${orbitron.className} text-[14px] xl:text-2xl lg:text-2xl md:text-2xl text-white font-bold uppercase py-6`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
+              What Attracts Influencers <br /> and Fans to Formula Dream
+            </h2>
+            <div className="flex flex-row items-center justify-between md:justify-between lg:justify-between xl:justify-between mx-12 relative">
+              {/* Phone 1 */}
+              <Image
+                src="/images/home/phone-left.png"
+                alt=""
+                width={250}
+                height={250}
+                className="hidden md:block lg:block xl:block"
+              />
+              <button
+                onClick={prevSlide}
+                className="md:mr-4 lg:mr-4 xl:mr-4 mr-1 z-50 relative right-12 lg:right-20 rounded-full bg-[#FF7100] p-2 cursor-pointer"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-            {/* Slider */}
-            <div className="relative w-80 h-80 flex items-center justify-center">
-              {cards.map((card, index) => {
-                const style = getCardStyle(index);
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="black"
+                  strokeWidth={3}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              {/* Slider */}
+              <div className="relative w-auto h-80 flex items-center justify-center">
+                {cards.map((card, index) => {
+                  const style = getCardStyle(index);
 
-                return (
-                  <div
-                    key={card.id}
-                    className={`absolute w-64 lg:w-80 xl:w-80 md:w-80 h-64 rounded-2xl shadow-2xl transition-all duration-700 ease-out cursor-pointer hover:shadow-3xl`}
-                    style={style}
-                    onClick={() => {
-                      if (index !== currentIndex && !isAnimating) {
-                        nextSlide();
-                      }
-                    }}
-                  >
+                  return (
                     <div
-                      className={`w-full h-full bg-gradient-to-br from-[#FF7A00] to-[#FF5900] rounded-2xl p-6 flex flex-col justify-between items-center text-white relative overflow-hidden`}
+                      key={card.id}
+                      className={`absolute w-64 lg:w-80 xl:w-96 md:w-80 lg:h-auto h-64 rounded-3xl shadow-2xl transition-all duration-700 ease-out cursor-pointer hover:shadow-3xl`}
+                      style={style}
+                      onClick={() => {
+                        if (index !== currentIndex && !isAnimating) {
+                          nextSlide();
+                        }
+                      }}
                     >
-                      <Image
-                        src="/images/home/rocketArrow.png"
-                        alt="logo"
-                        width={64}
-                        height={64}
-                        className="w-32"
-                      />
-                      {/* Content */}
-                      <div className="relative z-10 text-center">
-                        <h3 className="text-md xl:text-xl lg:text-xl md:text-xl font-bold mb-3 tracking-wide leading-tight">
-                          {card.title}
-                        </h3>
-                      </div>
-                      <div className="bg-black rounded-full px-4 py-2">
-                        <button onClick={() => setActiveCardId(card.id)}>
-                          <h2
-                            className={`${orbitron.className} text-sm text-[#FF5900] italic font-bold uppercase`}
-                          >
-                            Learn More
-                          </h2>
-                        </button>
+                      <div
+                        className={`w-full h-full bg-gradient-to-br from-[#FF7A00] to-[#FF5900] rounded-2xl p-6 flex flex-col justify-between items-center text-white relative overflow-hidden`}
+                      >
+                        <Image
+                          src="/images/home/rocketArrow.png"
+                          alt="logo"
+                          width={64}
+                          height={64}
+                          className="w-32"
+                        />
+                        {/* Content */}
+                        <div className="relative z-10 text-center">
+                          <h3 className="text-md xl:text-xl lg:text-xl md:text-xl font-bold mb-3 tracking-wide leading-tight">
+                            {card.title}
+                          </h3>
+                        </div>
+                        <div className="bg-black rounded-full px-4 py-2">
+                          <button onClick={() => setActiveCardId(card.id)}>
+                            <h2
+                              className={`${orbitron.className} text-sm text-[#FF5900] italic font-bold uppercase`}
+                            >
+                              Learn More
+                            </h2>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-            <button
-              onClick={nextSlide}
-              className="md:ml-4 lg:ml-4 xl:ml-4 ml-1 bg-[#ff6600] text-black rounded-full p-2 shadow-md hidden lg:block"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-            {/* Phone 2 */}
-            <Image
-              src="/images/home/phone-right.png"
-              alt=""
-              width={250}
-              height={250}
-              className="hidden md:block lg:block xl:block"
-            />
-          </div>
-        </div>
-      </center>
-      {activeCardId !== null && (
-        <div className="fixed inset-0 z-[100] backdrop-blur-md bg-black/50 flex items-center justify-center">
-         <div className="bg-gradient-to-b from-[#FF8300]/70 to-[#FF7A00]/50 backdrop-blur-sm text-white p-6 lg:p-12 rounded-lg w-11/12 max-w-4xl relative border border-orange-400/20">
-            <button
-              onClick={closePopup}
-              className="absolute bg-[#FF8300] p-2 rotate-180 rounded-full flex items-center justify-center text-xl font-bold"
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.2843 2L21.3725 9.78244M21.3725 9.78244L14.2843 17.5649M21.3725 9.78244H1.81885"
-                  stroke="black"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </button>
-            <div className="flex lg:flex-row flex-col items-center">
-              <div className="lg:mr-20">
-                <h2 className="lg:text-xl text-lg font-bold uppercase mb-4 lg:mt-0 mt-12">
-                  {cards.find((card) => card.id === activeCardId)?.title}
-                </h2>
-                <p className="lg:text-sm text-sm">{cards.find((card) => card.id === activeCardId)?.details}</p>
+                  );
+                })}
               </div>
+              <button
+                onClick={nextSlide}
+                className="md:ml-4 lg:ml-4 xl:ml-4 ml-1 z-50 relative left-12 lg:left-20 rounded-full bg-[#FF7100] p-2 cursor-pointer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="black"
+                  strokeWidth={3}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+              {/* Phone 2 */}
               <Image
-                src="/images/home/popUpphone.png"
+                src="/images/home/phone-right.png"
                 alt=""
-                width={450}
-                height={450}
-                className="w-[170px] h-[364px] hidden lg:block"
-              />
-              <Image
-                src="/images/home/popUpphone2.png"
-                alt=""
-                width={450}
-                height={450}
-                className="relative lg:w-[170px] lg:h-[364px] w-[180px] block lg:hidden lg:top-none top-4 lg:-bottom-none -bottom-2"
+                width={250}
+                height={250}
+                className="hidden md:block lg:block xl:block"
               />
             </div>
           </div>
-        </div>
-      )}
-    </div>
+        </center>
+        {activeCardId !== null && (
+          <div className="fixed inset-0 z-[100] backdrop-blur-md bg-black/50 flex items-center justify-center">
+            <div className="bg-gradient-to-b from-[#FF8300]/70 to-[#FF7A00]/50 backdrop-blur-sm text-white p-6 lg:p-12 rounded-lg w-11/12 max-w-4xl relative border border-orange-400/20">
+              <button
+                onClick={closePopup}
+                className="absolute bg-[#FF8300] p-2 rotate-180 rounded-full flex items-center justify-center text-xl font-bold"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.2843 2L21.3725 9.78244M21.3725 9.78244L14.2843 17.5649M21.3725 9.78244H1.81885"
+                    stroke="black"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+              <div className="flex lg:flex-row flex-col items-center">
+                <div className="lg:mr-20">
+                  <h2 className="lg:text-xl text-lg font-bold uppercase mb-4 lg:mt-0 mt-12">
+                    {cards.find((card) => card.id === activeCardId)?.title}
+                  </h2>
+                  <p className="lg:text-sm text-sm">
+                    {cards.find((card) => card.id === activeCardId)?.details}
+                  </p>
+                </div>
+                <Image
+                  src="/images/home/popUpphone.png"
+                  alt=""
+                  width={450}
+                  height={450}
+                  className="w-[170px] h-[364px] hidden lg:block"
+                />
+                <Image
+                  src="/images/home/popUpphone2.png"
+                  alt=""
+                  width={450}
+                  height={450}
+                  className="relative lg:w-[170px] lg:h-[364px] w-[180px] block lg:hidden lg:top-none top-4 lg:-bottom-none -bottom-2"
+                />
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </>
   );
 }
